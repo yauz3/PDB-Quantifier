@@ -1,0 +1,126 @@
+{
+  "model": {
+    "type": "IsolationForest",
+    "contamination": 0.1,
+    "random_state": 42,
+    "n_features": 25,
+    "feature_cols": [
+      "is_xray",
+      "is_cryo_em",
+      "is_nmr",
+      "resolution_A",
+      "deposit_year",
+      "release_year",
+      "age_years",
+      "protein_entity_count",
+      "total_polymer_entity_count",
+      "assembly_count",
+      "deposited_model_count",
+      "deposited_atom_count",
+      "deposited_polymer_monomer_count",
+      "deposited_nonpolymer_entity_count",
+      "atoms_per_residue",
+      "ligands_per_protein_entity",
+      "r_free",
+      "r_work",
+      "r_observed",
+      "clashscore",
+      "ramachandran_outliers_pct",
+      "rotamer_outliers_pct",
+      "rsrz_outliers_pct",
+      "dcc_r",
+      "dcc_rfree"
+    ]
+  },
+  "train_quantiles": {
+    "q05": -0.04090720321541648,
+    "q20": 0.0321006744607105,
+    "q50": 0.10351254973142954,
+    "q80": 0.14755826969101207,
+    "q95": 0.16505501381585322
+  },
+  "train_summary": {
+    "dataset": "train_ads",
+    "n": 85,
+    "inlier_count": 76,
+    "outlier_count": 9,
+    "inlier_ratio": 0.8941176470588236,
+    "outlier_ratio": 0.10588235294117647,
+    "decision_score_mean": 0.08880264014401537,
+    "decision_score_std": 0.06576001661288101,
+    "decision_score_min": -0.1351192991626219,
+    "decision_score_q25": 0.04948770822469689,
+    "decision_score_median": 0.10351254973142954,
+    "decision_score_q75": 0.13969733351715163,
+    "decision_score_max": 0.1790067077727444,
+    "conformity_score_mean_0_1": 0.637150380369151,
+    "conformity_score_std_0_1": 0.2946108562930171,
+    "tier_counts": {
+      "acceptable": 26,
+      "moderate": 25,
+      "low": 17,
+      "high": 17
+    }
+  },
+  "test1_summary": {
+    "dataset": "test_set_1",
+    "n": 27,
+    "inlier_count": 16,
+    "outlier_count": 11,
+    "inlier_ratio": 0.5925925925925926,
+    "outlier_ratio": 0.4074074074074074,
+    "decision_score_mean": 0.02409612878265243,
+    "decision_score_std": 0.07889725279353368,
+    "decision_score_min": -0.12395853217399755,
+    "decision_score_q25": -0.03487653730772994,
+    "decision_score_median": 0.04748597924118758,
+    "decision_score_q75": 0.08353607309169958,
+    "decision_score_max": 0.13441394241400384,
+    "conformity_score_mean_0_1": 0.36733081846181137,
+    "conformity_score_std_0_1": 0.3058178041478537,
+    "tier_counts": {
+      "low": 12,
+      "moderate": 10,
+      "acceptable": 5
+    }
+  },
+  "test2_summary": {
+    "dataset": "test_set_2",
+    "n": 100,
+    "inlier_count": 57,
+    "outlier_count": 43,
+    "inlier_ratio": 0.57,
+    "outlier_ratio": 0.43,
+    "decision_score_mean": 0.0010610158660243668,
+    "decision_score_std": 0.09636316387332115,
+    "decision_score_min": -0.24357926517633155,
+    "decision_score_q25": -0.06524310843405062,
+    "decision_score_median": 0.019609600999475063,
+    "decision_score_q75": 0.08004365255739355,
+    "decision_score_max": 0.16884831173543835,
+    "conformity_score_mean_0_1": 0.32098621348657475,
+    "conformity_score_std_0_1": 0.29911997285410297,
+    "tier_counts": {
+      "low": 52,
+      "moderate": 37,
+      "acceptable": 9,
+      "high": 2
+    }
+  },
+  "comparisons_vs_train": {
+    "test_set_1": {
+      "dataset": "test_set_1",
+      "vs_train_decision_score_mean_diff": -0.06470651136136293,
+      "vs_train_conformity_score_mean_diff": -0.2698195619073396,
+      "ks_statistic_decision_score": 0.4148148148148148,
+      "ks_pvalue_decision_score": 0.0010760197223870095
+    },
+    "test_set_2": {
+      "dataset": "test_set_2",
+      "vs_train_decision_score_mean_diff": -0.08774162427799101,
+      "vs_train_conformity_score_mean_diff": -0.3161641668825762,
+      "ks_statistic_decision_score": 0.4364705882352941,
+      "ks_pvalue_decision_score": 2.068947581668215e-08
+    }
+  }
+}
